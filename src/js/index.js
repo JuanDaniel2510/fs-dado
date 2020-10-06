@@ -1,10 +1,8 @@
-let dots = new Array(6);
-for (var i = 0; i < 7; i++)
-  dots[i] = document.querySelector('#point' + (i + 1));
+const dots = new Array(6);
+for (let i = 0; i < 7; i++) { dots[i] = document.querySelector('#point' + (i + 1)); }
 
-
-function launch() {
-  var num = getRandomFace();
+function launch () {
+  const num = getRandomFace();
   console.log(num);
   switch (num) {
     case 1:
@@ -28,16 +26,13 @@ function launch() {
   }
 }
 
-function getRandomFace() {
+function getRandomFace () {
   return Math.floor((Math.random() * 6) + 1);
 }
 
-function show(points) {
-  for (var i = 0; i < dots.length; i++)
-    dots[i].classList.add('hide');
-
-  for (var j = 0; j < points.length; j++)
-    dots[points[j] - 1].classList.remove('hide');
+function show (points) {
+  for (let i = 0; i < dots.length; i++) { dots[i].classList.add('hide'); }
+  for (let j = 0; j < points.length; j++) { dots[points[j] - 1].classList.remove('hide'); }
 }
 
-document.getElementById("push").addEventListener("click",launch);
+document.getElementById('push').addEventListener('click', launch);
