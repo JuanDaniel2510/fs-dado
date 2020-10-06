@@ -1,7 +1,7 @@
 const dots = new Array(6);
 for (let i = 0; i < 7; i++) { dots[i] = document.querySelector('#point' + (i + 1)); }
 
-function launch () {
+function launch() {
   const num = getRandomFace();
   console.log(num);
   switch (num) {
@@ -26,11 +26,11 @@ function launch () {
   }
 }
 
-function getRandomFace () {
+function getRandomFace() {
   return Math.floor((Math.random() * 6) + 1);
 }
 
-function show (points) {
+function show(points) {
   for (let i = 0; i < dots.length; i++) { dots[i].classList.add('hide'); }
   for (let j = 0; j < points.length; j++) { dots[points[j] - 1].classList.remove('hide'); }
 }
