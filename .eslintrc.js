@@ -4,14 +4,15 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'standard'
+    "standard"
   ],
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: "module"
   },
   rules: {
-    semi: ['error', 'always'],
-    'space-before-function-paren': ['error', 'never']
+    semi: ["error", "always"],
+    quotes: ["error", "double"],
+    "space-before-function-paren": ["error", "never"]
   }
 };
