@@ -7,8 +7,8 @@
     "start": "parcel serve src/index.html",
     "build": "parcel build src/index.html -d build --public-url /fs-dado",
     "deploy": "gh-pages -d build",
-    "clean": "rm -rf dist build .cahe",
-    "help": "echo Ayuda"
+    "launch": "parcel build src/index.html -d build --public-url /fs-dado && gh-pages -d build",
+    "clean": "rm -rf dist build .cahe"
   },
   "keywords": [],
   "author": "JuanDaniel2510",
